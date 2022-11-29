@@ -1,15 +1,20 @@
-A=int(input("Enter the smallest value of the range: "))
-B=int(input("Enter the largest value of the range: "))
-print("In the range of ["+str(A)+","+str(B)+"]")
-for i in range(A,B+1):
-        if i==1:
-            print(i,"is neither Prime nor Composite")
-        num=2
-        for j in range(2,i//2+1):
-            if (i%j==0):
-                num=1
+A=int(input())
+B=int(input())
+for num in range(A,B+1):
+    flag = False
+    if num>1:
+        for i in range(2,num):
+            if (num%i)==0:
+                flag=True
                 break
-        if (num==2):
-            print(i,"is a Prime number")
+    if flag:
+        print(num,"is Composite Number")
+    else:
+        if num>0:
+            if num==1:
+                print(num,"Neither Prime Nor Composite")
+            else:
+                print(num,"is Prime Number")
         else:
-            print(i,"is a Composite number")
+            print("Invalid Input")
+            break
