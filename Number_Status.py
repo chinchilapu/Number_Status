@@ -1,5 +1,6 @@
-A=int(input())
-B=int(input())
+A=int(input("Enter lowest number of the Range: "))
+B=int(input("Enter Highest Number of the Range: "))
+print("In the Range of Numbers","["+str(A)+","+str(B)+"]")
 for num in range(A,B+1):
     flag = False
     if num>1:
